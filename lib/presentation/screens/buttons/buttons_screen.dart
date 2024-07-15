@@ -75,8 +75,8 @@ class _ButtonsView extends StatelessWidget {
               icon: const Icon(Icons.first_page),
               label: const Text('Text icon')
             ),
-            const CustomButton(),
             IconButton(onPressed: (){}, icon: const Icon(Icons.app_registration_rounded)),
+            const CustomButton(),
             IconButton(
               onPressed: (){}, 
               icon: const Icon(Icons.app_registration_rounded),
@@ -97,11 +97,22 @@ class CustomButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  Material(
-      color: Colors.blue,
-      child: Padding(
-        padding:const EdgeInsets.symmetric(vertical: 8,horizontal: 10),
-        child: Text('HOLA', style: TextStyle(color: Colors.white),)),
+
+    final colors =  Theme.of(context).colorScheme;
+
+    return  ClipRRect(
+      borderRadius: BorderRadius.circular(20),
+      child: Material(
+        color: colors.primary,
+        child: InkWell(
+          onTap: (){},
+            child: const Padding(
+              padding: EdgeInsets.symmetric(vertical: 10,horizontal: 20),
+              child: Text('Hola mundo', style: TextStyle(color: Colors.white)
+            )
+          ),
+        ),
+      ),
     );
   }
 }
