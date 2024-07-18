@@ -115,7 +115,7 @@ class _InfiniteScrollScreenState extends State<InfiniteScrollScreen> {
         ),
       ),floatingActionButton: FloatingActionButton(
         onPressed: (){
-          context.pop();
+          isLoading ? null : context.pop();
         },
         child: ( isLoading ) 
         ? _iconRefresh()
