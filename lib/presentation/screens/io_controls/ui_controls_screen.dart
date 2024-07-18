@@ -64,7 +64,7 @@ class _UiControlsViewState extends State<_UiControlsView> {
               }),
             ),
             RadioListTile(
-              title: const Text('By boar'),
+              title: const Text('By boat'),
               value: Transportation.boat, 
               groupValue: selectedTransportation, 
               onChanged: (value) => setState(() {
